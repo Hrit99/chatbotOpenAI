@@ -58,8 +58,10 @@ const initServer =
   }
 }
 
-const maxTokens = 50;
+const maxTokens = 50; // maximum tokens for getting the response
 
+
+//initializing socket events here
 const ioevents = () => {
     io.on('connection', (socket) => {
         console.log('user connected');
@@ -67,11 +69,11 @@ const ioevents = () => {
           console.log('user disconnected');
         });
         socket.on('usermessage', async function (prompt) {
-            usermessage(socket, prompt)
+            usermessage(socket, prompt)  //function to perform actions when message is recieved from the user.
             saveChat({
                 "sender": "user",
                 "content": prompt
-            })
+            })   //saving chat recieved from the user
           });
       })
 }

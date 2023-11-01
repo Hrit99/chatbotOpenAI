@@ -1,4 +1,5 @@
-const mongoose = require("mongoose")
+//model defined for the chats
+const mongoose = require("mongoose")  
 const schema = mongoose.Schema 
 const chatSchema = new schema({
     sender: {

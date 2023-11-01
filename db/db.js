@@ -1,5 +1,7 @@
 const chat = require("./model")
 
+
+//api to save a single chat to manogdb database
 const saveChat =
     async (newChat) => {
   try {
@@ -10,6 +12,8 @@ const saveChat =
 }
 
 
+
+//api to read all chats from the mongodb database
 const readChats =
     async () => {
   try {
